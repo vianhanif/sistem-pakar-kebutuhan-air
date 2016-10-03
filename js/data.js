@@ -1,4 +1,4 @@
-const data = {
+let data = {
     app: {
       name: 'Sistem Pakar Kebutuhan Air',
       description: 'Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat.',
@@ -17,24 +17,39 @@ const data = {
       },
       questions: [
         {
+          name: 'nama',
           question: "what's your name ?",
-          answer: 'text',
-          submit: 'Enter'
-        }
-      ],
-      attributes: [
-        {
-          name: 'gender',
+          index: 'Name',
           type: 'text',
-          value: 'male',
-          comparison: '==', // < | > | = | <= | >= | ==
+          answer: ''
         },
         {
-          name: 'age',
+          name: 'umur',
+          question: 'How old are you ?',
+          index: 'Age',
           type: 'number',
-          value: 20,
-          comparison: '<=',
-        }
+          answer: ''
+        },
+        {
+          name: 'gender',
+          question: "Which gender are you?",
+          index: 'Gender',
+          type: 'choice',
+          choices: [
+            'Male', 'Female'
+          ],
+          answer: ''
+        },
+        {
+          name: 'location',
+          question: "Where do you live?",
+          index: 'Location',
+          type: 'choice',
+          choices: [
+            'Depok', 'Bogor', 'Bandung'
+          ],
+          answer: ''
+        },
       ],
     }
 };

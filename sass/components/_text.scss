@@ -2,12 +2,12 @@
   font-size: 40px;
   font-weight: 600;
   color: shade($secondary, 5%);
-  text-shadow: $shadow;
 }
 
 .text-long{
   font-size: 22px;
-  color: shade($blue, 10%);
+  color: shade($blue, 0%);
+  font-weight: 600;
 }
 
 .text-border{
@@ -37,7 +37,42 @@
 }
 
 .text-small{
-  font-size: 14px;
+  font-size: 16px;
   padding-left: 5px;
-  color: shade($blue, 10%);
+  color: shade($blue, 5%);
+}
+
+.text-input{
+  @extend .button;
+  font-size: 18px;
+  margin-top: 15px;
+  height: 42px;
+  width: 250px;
+  transform: translateY(2px);
+}
+
+.text-wide{
+  min-width: 150px;
+}
+
+.text-label{
+  @extend .text-list;
+  font-weight: 600;
+}
+
+.text-item{
+  @extend .text-list;
+  &:before{
+    content: ':';
+  }
+}
+
+.text-error{
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: tint($red, 80%);
+  color: tint($red, 30%);
+  font-size: 18px;
+  transform: translateY(10px);
 }
