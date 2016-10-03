@@ -3,7 +3,7 @@ const Result = React.createClass({
     return(
       <div>
         <div className="row">
-          <div className="col-xs-8 col-xs-offset-2">
+          <div className="col-xs-10 col-xs-offset-1">
             <ul className="list-unstyled">
               <li className="list-divider"><span className="text-subtitle">Result</span></li>
               <li>
