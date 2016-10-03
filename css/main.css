@@ -13,7 +13,7 @@ body {
   background: linear-gradient(to bottom right, #4183d7, #86e2d5);
   /* Standard syntax */
   padding-top: 10%;
-  min-height: 950px;
+  min-height: 1100px;
 }
 @media (max-width: 768px) {
   /* line 1, ../sass/components/_base.scss */

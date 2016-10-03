@@ -6,7 +6,7 @@ body{
   background: -moz-linear-gradient(bottom right, $primary, $green); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, $primary, $green); /* Standard syntax */
   padding-top: 10%;
-  min-height: 950px;
+  min-height: 1100px;
   @media(max-width: 768px){
     padding-top: 30%;
   }
