@@ -9,14 +9,12 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="css/vendor/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="vendor/lightbox-bootstrap/ekko-lightbox.min.css"> -->
 
     <link rel="stylesheet" href="css/main.css">
 
     <!-- scripts -->
     <script src="js/dist/jquery-3.1.1.min.js"></script>
     <script src="css/vendor/js/bootstrap.min.js"></script>
-    <!-- <script src="vendor/lightbox-bootstrap/ekko-lightbox.min.js"></script> -->
 
     <script src="js/dist/fontawesome.min.js"></script>
     <script src="js/dist/react.min.js"></script>
