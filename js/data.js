@@ -45,9 +45,7 @@ let data = {
           question: "Where do you live?",
           index: 'Location',
           type: 'choice',
-          choices: [
-            'Depok', 'Bogor', 'Bandung'
-          ],
+          choices: ['Bandung', 'Banjar', 'Bekasi', 'Bogor', 'Ciamis', 'Cianjur', 'Cibinong', 'Cikarang', 'Cimahi', 'Cirebon', 'Cisaat', 'Depok', 'Garut', 'Indramayu', 'Karawang', 'Kuningan', 'Majalengka', 'Ngamprah', 'Pelabuhan-Ratu', 'Purwakarta', 'Singaparna', 'Soreang', 'Subang', 'Sumber', 'Sumedang', 'Tasikmalaya'],
           answer: ''
         },
       ],

@@ -28,7 +28,7 @@ const Question = React.createClass({
   },
   handleClickChoice: function(_choice){
     data.app.questions[this.props.questionState].answer = $('#' + _choice).text();
-    // console.log(data.app.questions[this.props.questionState].answer);
+    console.log(data.app.questions[this.props.questionState].answer);
     this.nextQuestion();
   },
   nextQuestion: function(){
@@ -65,7 +65,7 @@ const Question = React.createClass({
         <div className="col-xs-12">
           <span className="text-subtitle">{this.props.question.question}</span>
         </div>
-        <div className="col-xs-6 col-xs-offset-3">
+        <div className="col-xs-12">
           <ul className="list-inline">
             {this.props.question.choices.map(function(choice, index){
               return(
