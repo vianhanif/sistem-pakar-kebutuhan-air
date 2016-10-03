@@ -4,9 +4,9 @@ const App = React.createClass({
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            <ul className="list-unstyled">
-              <li><span>{data.app.name}</span></li>
-              <li><span>{data.app.description}</span></li>
+            <ul className="list-unstyled text-center">
+              <li><span className="text-title">{data.app.name}</span></li>
+              <li className="text-border"><span className="text-long">{data.app.description}</span></li>
             </ul>
           </div>
         </div>

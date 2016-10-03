@@ -7,7 +7,7 @@ const List = React.createClass({
             <li><span className="text-subtitle">{this.props.data.title}</span></li>
             {this.props.data.list.map(function(data, index){
               return(
-                <li key={index}><span className="test-list">{data.name}</span></li>
+                <li key={index}><span className="text-list">{data.name}<i className="text-small">{data.id}</i></span></li>
               );
             })}
           </ul>

@@ -1,0 +1,16 @@
+.button{
+  font-size: 18px;
+  color: $primary;
+  background-color: $secondary;
+  box-shadow: $shadow;
+  &:hover{
+    color: shade($primary, 20%);
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+.button-main{
+  font-size: 24px;
+}
