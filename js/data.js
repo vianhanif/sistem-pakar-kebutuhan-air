@@ -18,7 +18,7 @@ let data = {
       questions: [
         {
           name: 'nama',
-          question: "what's your name ?",
+          question: "What's your name ?",
           index: 'Name',
           type: 'text',
           answer: ''
