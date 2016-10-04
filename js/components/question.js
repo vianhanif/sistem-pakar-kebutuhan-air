@@ -33,8 +33,8 @@ const Question = React.createClass({
   },
   nextQuestion: function(){
     if((this.props.questionState + 1) < data.app.questions.length){
-      if(this.props.questionState + 1 == 3){
-        if(data.app.questions[2].answer == 'Female'){
+      if(this.props.questionState + 1 == 4){
+        if(data.app.questions[3].answer == 'Female'){
           this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
         }else{
           this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);

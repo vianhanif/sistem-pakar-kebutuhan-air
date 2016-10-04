@@ -29,6 +29,18 @@ body {
   margin-bottom: 10px;
 }
 
+/* line 21, ../sass/components/_base.scss */
+.pane-result {
+  padding: 15px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 3px rgba(39, 44, 50, 0.58);
+}
+/* line 26, ../sass/components/_base.scss */
+.pane-result .text-label, .pane-result .text-item {
+  color: #56616d;
+}
+
 /* line 1, ../sass/components/_text.scss */
 .text-title {
   font-size: 40px;

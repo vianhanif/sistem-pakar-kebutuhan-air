@@ -23,19 +23,21 @@ let data = {
           type: 'text',
           answer: ''
         },
-        // {
-        //   name: 'umur',
-        //   question: 'How old are you ?',
-        //   index: 'Age',
-        //   type: 'number',
-        //   answer: ''
-        // },
+        {
+          name: 'umur',
+          question: 'How old are you (years) ?',
+          index: 'Age',
+          type: 'number',
+          answer: '',
+          postfix: 'years old'
+        },
         {
           name: 'berat',
-          question: 'How much do you weight ?',
+          question: 'How much do you weight (kg) ?',
           index: 'Weight',
           type: 'number',
-          answer: ''
+          answer: '',
+          postfix: 'kg'
         },
         {
           name: 'gender',

@@ -31,7 +31,7 @@ const Result = React.createClass({
                             return(
                               <ul className="list-inline">
                                 <li className="text-wide"><span className="text-label">{question.index}</span></li>
-                                <li><span className="text-item">{question.answer}</span></li>
+                                <li><span className="text-item">{question.answer} {question.postfix}</span></li>
                               </ul>
                             );
                           }
@@ -41,54 +41,8 @@ const Result = React.createClass({
                   })}
                 </ul>
               </li>
-              <li>
-                <ul className="list-unstyled list-divider text-left">
-                  <li className="list-devider"><span className="text-subtitle">Based on Gender</span></li>
-                  <li>
-                    {(()=>{
-                      switch(data.app.questions[2].answer){
-                        case data.app.questions[2].choices[0]:
-                        return(
-                          <ul className="list-inline">
-                            <li className="text-wide"><span className="text-label">Water Need</span></li>
-                            <li><span className="text-item">{30*parseFloat(data.app.questions[1].answer)} ml</span></li>
-                          </ul>
-                        );
-                        break;
-
-                        case data.app.questions[2].choices[1]:
-                          switch(data.app.questions[3].answer){
-                            case data.app.questions[3].choices[0]:
-                            return(
-                              <ul className="list-inline">
-                                <li className="text-wide"><span className="text-label">Water Need</span></li>
-                                <li><span className="text-item">{(30*parseFloat(data.app.questions[1].answer))+300} ml</span></li>
-                              </ul>
-                            );
-                            case data.app.questions[3].choices[1]:
-                            return(
-                              <ul className="list-inline">
-                                <li className="text-wide"><span className="text-label">Water Need</span></li>
-                                <li><span className="text-item">{(30*parseFloat(data.app.questions[1].answer))+550} ml</span></li>
-                              </ul>
-                            );
-                            break;
-
-                            case data.app.questions[3].choices[2]:
-                            return(
-                              <ul className="list-inline">
-                                <li className="text-wide"><span className="text-label">Water Need</span></li>
-                                <li><span className="text-item">{30*parseFloat(data.app.questions[1].answer)} ml</span></li>
-                              </ul>
-                            );
-                            break;
-                          }
-                        break;
-                      }
-                    })()}
-                  </li>
-                </ul>
-              </li>
+              <li><BasedOnGender /></li>
+              <li><BasedOnAge /></li>
             </ul>
           </div>
         </div>
