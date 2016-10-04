@@ -33,3 +33,21 @@
     box-shadow: 2px 2px 4px rgba($secondary, .2);
   }
 }
+
+.button-back{
+  border: 2px solid rgba($primary, 0);
+  padding-left: 0px;
+  font-size: 24px;
+  transform: translateY(-5px);
+  &:before{
+    content: '<';
+    font-size: 24px;
+    padding-right: 5px;
+    transform: translateY(2px);
+  }
+  &:hover,&:focus{
+    background: none;
+    color: $secondary;
+    border: 2px solid rgba($primary, 0);
+  }
+}

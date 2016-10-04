@@ -23,10 +23,17 @@ let data = {
           type: 'text',
           answer: ''
         },
+        // {
+        //   name: 'umur',
+        //   question: 'How old are you ?',
+        //   index: 'Age',
+        //   type: 'number',
+        //   answer: ''
+        // },
         {
-          name: 'umur',
-          question: 'How old are you ?',
-          index: 'Age',
+          name: 'berat',
+          question: 'How much do you weight ?',
+          index: 'Weight',
           type: 'number',
           answer: ''
         },
@@ -41,13 +48,23 @@ let data = {
           answer: ''
         },
         {
-          name: 'location',
-          question: "Where do you live?",
-          index: 'Location',
+          name: 'condition',
+          question: "How is your condition ?",
+          index: 'Condition',
           type: 'choice',
-          choices: ['Bandung', 'Banjar', 'Bekasi', 'Bogor', 'Ciamis', 'Cianjur', 'Cibinong', 'Cikarang', 'Cimahi', 'Cirebon', 'Cisaat', 'Depok', 'Garut', 'Indramayu', 'Karawang', 'Kuningan', 'Majalengka', 'Ngamprah', 'Pelabuhan-Ratu', 'Purwakarta', 'Singaparna', 'Soreang', 'Subang', 'Sumber', 'Sumedang', 'Tasikmalaya'],
-          answer: ''
+          choices: [
+            'Pregnant', 'Breastfeed', 'Normal'
+          ],
         },
       ],
     }
 };
+
+// {
+//   name: 'location',
+//   question: "Where do you live?",
+//   index: 'Location',
+//   type: 'choice',
+//   choices: ['Bandung', 'Banjar', 'Bekasi', 'Bogor', 'Ciamis', 'Cianjur', 'Cibinong', 'Cikarang', 'Cimahi', 'Cirebon', 'Cisaat', 'Depok', 'Garut', 'Indramayu', 'Karawang', 'Kuningan', 'Majalengka', 'Ngamprah', 'Pelabuhan-Ratu', 'Purwakarta', 'Singaparna', 'Soreang', 'Subang', 'Sumber', 'Sumedang', 'Tasikmalaya'],
+//   answer: ''
+// },

@@ -2,7 +2,7 @@ const Question = React.createClass({
   getInitialState: function(){
     return {
       text: '',
-      showError: null
+      showError: null,
     };
   },
   handleChange: function(e){
@@ -28,14 +28,22 @@ const Question = React.createClass({
   },
   handleClickChoice: function(_choice){
     data.app.questions[this.props.questionState].answer = $('#' + _choice).text();
-    console.log(data.app.questions[this.props.questionState].answer);
+    // console.log(data.app.questions[this.props.questionState].answer);
     this.nextQuestion();
   },
   nextQuestion: function(){
     if((this.props.questionState + 1) < data.app.questions.length){
-        this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
+      if(this.props.questionState + 1 == 3){
+        if(data.app.questions[2].answer == 'Female'){
+          this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
+        }else{
+          this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);
+        }
+      }else{
+          this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
+      }
     }else{
-      this.props.setPanelState(<Result/>);
+      this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);
     }
   },
   textQuestion: function(){

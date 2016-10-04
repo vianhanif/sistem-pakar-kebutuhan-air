@@ -115,6 +115,11 @@ body {
   transform: translateY(10px);
 }
 
+/* line 80, ../sass/components/_text.scss */
+.text-centered {
+  transform: translateX(-40px);
+}
+
 /* line 1, ../sass/components/_button.scss */
 .button, .text-input {
   font-size: 18px;
@@ -153,4 +158,25 @@ body {
   font-weight: 700;
   border: 2px solid #86e2d5;
   box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* line 37, ../sass/components/_button.scss */
+.button-back {
+  border: 2px solid rgba(65, 131, 215, 0);
+  padding-left: 0px;
+  font-size: 24px;
+  transform: translateY(-5px);
+}
+/* line 42, ../sass/components/_button.scss */
+.button-back:before {
+  content: '<';
+  font-size: 24px;
+  padding-right: 5px;
+  transform: translateY(2px);
+}
+/* line 48, ../sass/components/_button.scss */
+.button-back:hover, .button-back:focus {
+  background: none;
+  color: white;
+  border: 2px solid rgba(65, 131, 215, 0);
 }
