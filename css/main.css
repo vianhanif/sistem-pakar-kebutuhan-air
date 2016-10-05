@@ -12,8 +12,8 @@ body {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #4183d7, #86e2d5);
   /* Standard syntax */
-  padding-top: 10%;
   min-height: 1100px;
+  padding-top: 10%;
 }
 @media (max-width: 768px) {
   /* line 1, ../sass/components/_base.scss */
