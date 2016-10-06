@@ -1,7 +1,7 @@
 let data = {
     app: {
-      name: 'Sistem Pakar Kebutuhan Air',
-      description: 'Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat.',
+      name: 'Aqua Meter',
+      description: "This ES will give an advice about how much water that human's body needs based on weight, gender, and activity. So, how much water your body needs today?",
       writers: {
         title: 'Writers',
         list: [
@@ -57,7 +57,16 @@ let data = {
           choices: [
             'Pregnant', 'Breastfeed', 'Normal'
           ],
+          abswer: ''
         },
+        {
+          name: 'exercise',
+          question: "Do you usually exercise or not ?",
+          index: 'Exercise',
+          type: 'choice',
+          choices: ['Yes', 'No'],
+          answer: ''
+        }
       ],
     }
 };

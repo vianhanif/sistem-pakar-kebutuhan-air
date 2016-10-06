@@ -63,7 +63,18 @@
 .text-item{
   @extend .text-list;
   &:before{
+    content: none;
+  }
+}
+
+.text-label-addon{
+  &:after{
     content: ':';
+    font-weight: 700;
+    padding-right: 4px;
+    padding-left: 4px;
+    float: right;
+    color: $green;
   }
 }
 

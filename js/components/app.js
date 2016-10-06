@@ -12,7 +12,7 @@ const App = React.createClass({
         </div>
         <ExpertApp/>
         <List data={data.app.writers}/>
-        <List data={data.app.credits}/>
+        <List data={data.app.credits} opac={true}/>
       </div>
     );
   }

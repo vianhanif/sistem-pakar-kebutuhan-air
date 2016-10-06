@@ -12,7 +12,7 @@ body {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #4183d7, #86e2d5);
   /* Standard syntax */
-  min-height: 1100px;
+  min-height: 1000px;
   padding-top: 10%;
 }
 @media (max-width: 768px) {
@@ -39,6 +39,11 @@ body {
 /* line 26, ../sass/components/_base.scss */
 .pane-result .text-label, .pane-result .text-item {
   color: #56616d;
+}
+
+/* line 31, ../sass/components/_base.scss */
+.opac-visible {
+  opacity: .4;
 }
 
 /* line 1, ../sass/components/_text.scss */
@@ -113,10 +118,20 @@ body {
 
 /* line 65, ../sass/components/_text.scss */
 .text-item:before {
-  content: ':';
+  content: none;
 }
 
-/* line 70, ../sass/components/_text.scss */
+/* line 71, ../sass/components/_text.scss */
+.text-label-addon:after {
+  content: ':';
+  font-weight: 700;
+  padding-right: 4px;
+  padding-left: 4px;
+  float: right;
+  color: #86e2d5;
+}
+
+/* line 81, ../sass/components/_text.scss */
 .text-error {
   border-radius: 4px;
   padding-top: 5px;
@@ -127,7 +142,7 @@ body {
   transform: translateY(10px);
 }
 
-/* line 80, ../sass/components/_text.scss */
+/* line 91, ../sass/components/_text.scss */
 .text-centered {
   transform: translateX(-40px);
 }

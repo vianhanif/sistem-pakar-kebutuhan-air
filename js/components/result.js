@@ -30,7 +30,7 @@ const Result = React.createClass({
                           if(question.answer){
                             return(
                               <ul className="list-inline">
-                                <li className="text-wide"><span className="text-label">{question.index}</span></li>
+                                <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
                                 <li><span className="text-item">{question.answer} {question.postfix}</span></li>
                               </ul>
                             );

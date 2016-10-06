@@ -9,8 +9,7 @@ const Question = React.createClass({
     this.setState({text: e.target.value});
     this.setState({showError: null});
   },
-  handleClickText: function(e){
-    e.preventDefault();
+  handleEvent: function(){
     if(this.state.text){
       this.setState({text: ''});
       this.setState({showError: null});
@@ -26,6 +25,15 @@ const Question = React.createClass({
       });
     }
   },
+  handlePress: function(e){
+    if(e.key == 'Enter'){
+      this.handleEvent();
+    }
+  },
+  handleClickText: function(e){
+    e.preventDefault();
+    this.handleEvent();
+  },
   handleClickChoice: function(_choice){
     data.app.questions[this.props.questionState].answer = $('#' + _choice).text();
     // console.log(data.app.questions[this.props.questionState].answer);
@@ -37,7 +45,7 @@ const Question = React.createClass({
         if(data.app.questions[3].answer == 'Female'){
           this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
         }else{
-          this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);
+          this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 2]} questionState={this.props.questionState + 2} setPanelState={this.props.setPanelState}/>);
         }
       }else{
           this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
@@ -56,7 +64,7 @@ const Question = React.createClass({
           <ul className="list-inline">
             <li>
               <ul className="list-unstyled">
-                <li><input type={this.props.question.type == 'number' ? 'number' : 'text'} className="form-control text-input" onChange={this.handleChange} value={this.state.text} name={this.props.question.name} autoComplete="off"/></li>
+                <li><input type={this.props.question.type == 'number' ? 'number' : 'text'} className="form-control text-input" onChange={this.handleChange} value={this.state.text} name={this.props.question.name} autoComplete="off" onKeyPress={this.handlePress}/></li>
                 <li>{this.state.showError}</li>
               </ul>
             </li>

@@ -5,7 +5,7 @@ body{
   background: -o-linear-gradient(bottom right, $primary, $green); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, $primary, $green); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, $primary, $green); /* Standard syntax */
-  min-height: 1100px;
+  min-height: 1000px;
   padding-top: 10%;
   @media(max-width: 768px){
     padding-top: 30%;
@@ -26,4 +26,8 @@ body{
   .text-label,.text-item{
     color: shade($accent, 20%);
   }
+}
+
+.opac-visible{
+  opacity: .4;
 }

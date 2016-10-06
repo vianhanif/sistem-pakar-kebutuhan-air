@@ -1,7 +1,7 @@
 const List = React.createClass({
   render: function(){
     return(
-      <div className="row">
+      <div className={"row "+ (this.props.opac ? "opac-visible" : "")}>
         <div className="col-sm-12">
           <ul className="list-unstyled">
             <li><span className="text-subtitle">{this.props.data.title}</span></li>
