@@ -28,7 +28,7 @@ const BasedOnGender = React.createClass({
     return Math.round(arg/0.6) + ' bottle';
   },
   cangkir: function(arg){
-    return Math.round(arg/0.285) + ' cup';
+    return Math.round(arg/0.24) + ' cup';
   },
   satuan: function(){
     return 'L';
