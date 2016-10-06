@@ -5,8 +5,8 @@ let data = {
       writers: {
         title: 'Writers',
         list: [
-          {id: '412312412', name: 'Eka'},
-          {id: '124123412', name: 'Mitha'}
+          {id: '412312412', name: 'Eka Miratul Khasanah'},
+          {id: '124123412', name: 'Mitha Filandari'}
         ]
       },
       credits: {
