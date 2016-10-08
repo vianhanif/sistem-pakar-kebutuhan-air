@@ -24,6 +24,59 @@ let data = {
           answer: ''
         },
         {
+          name: 'urine',
+          question: 'What color of your urine recently ?',
+          index: 'Urine Color',
+          type: 'image',
+          choices: [
+              {
+                name: 'Transparent',
+                description: "you're drinking a lot of water, You may want to cut back.",
+                description_id: 'desc-transparent',
+                class: 'ur-transparent'
+              },
+              {
+                name: 'Pale Straw',
+                description: "you're normal, healthy and well-hydrated.",
+                description_id: 'desc-pale',
+                class: 'ur-pale'
+              },
+              {
+                name: "Transparent Yellow",
+                description: "you're normal.",
+                description_id: 'desc-transparent-yellow',
+                class: 'ur-transparent-yellow'
+              },
+              {
+                name: 'Dark Yellow',
+                description: "you're normal. But drink some water soon",
+                description_id: 'desc-dark-yellow',
+                class: 'ur-dark-yellow',
+              },
+              {
+                name: "Amber or Honey",
+                description: "your body isn't getting enough water. Drink some now",
+                description_id: 'desc-amber',
+                class: 'ur-amber'
+              },
+              {
+                name: "Syrup or Brown Ale",
+                description: "you could have severe dehydration. Drink water. And if it persist, see a doctor (you could have liver disease).",
+                description_id: 'desc-syrup',
+                class: 'ur-syrup'
+              },
+              {
+                name: "Orange",
+                description: "you may not be drinking enough water or it could be food dye. And if it persiss, see a doctor (you could have a liver or bile duct condition).",
+                description_id: 'desc-orange',
+                class: 'ur-orange'
+              }
+          ],
+          answer: '',
+          description: '',
+          class: ''
+        },
+        {
           name: 'umur',
           question: 'How old are you (years) ?',
           index: 'Age',
@@ -67,46 +120,6 @@ let data = {
           choices: ['Yes', 'No'],
           answer: ''
         },
-        {
-          name: 'urine',
-          question: 'What color of your urine recently ?',
-          index: 'Urine',
-          type: 'image',
-          choices: [
-              {
-                name: 'Transparent',
-                description: "You're drinking a lot of water, You may want to cut back.",
-                class: 'ur-transparent'
-              },
-              {
-                name: 'Pale Straw',
-                description: "You're normal, healthy and well-hydrated.",
-                class: 'ur-pale'
-              },
-              {
-                name: "Transparent Yellow",
-                description: "Normal. But drink some water soon.",
-                class: 'ur-transparent-yellow'
-              },
-              {
-                name: "Amber or Honey",
-                description: "Your body isn't getting enough water. Drink some now",
-                class: 'ur-amber'
-              },
-              {
-                name: "Syrup or Brown Ale",
-                description: "You could have severe dehydration. Drink water. And if it persist, see a doctor (you could have liver disease).",
-                class: 'ur-syrup'
-              },
-              {
-                name: "Orange",
-                description: "You may not be drinking enough water or it could be food dye. And if it persiss, see a doctor (you could have a liver or bile duct condition).",
-                class: 'ur-orange'
-              }
-          ],
-          answer: '',
-          class: ''
-        }
       ],
     }
 };

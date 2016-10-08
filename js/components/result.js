@@ -4,10 +4,11 @@ const Result = React.createClass({
     this.props.setPanelState(<Start setPanelState={this.props.setPanelState}/>);
   },
   render: function(){
+    console.log(data);
     return(
       <div>
         <div className="row">
-          <div className="col-xs-10 col-xs-offset-1">
+          <div className="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1">
             <ul className="list-unstyled">
               <li className="list-divider">
                 <li>
@@ -23,6 +24,9 @@ const Result = React.createClass({
               </li>
               <li>
                 <ul className="list-unstyled list-divider text-left">
+                  <li>
+                    <span className="text-subtitle">This is your records</span>
+                  </li>
                   {data.app.questions.map(function(question, index){
                     return(
                       <li>
@@ -30,8 +34,12 @@ const Result = React.createClass({
                           if(question.answer){
                             return(
                               <ul className="list-inline">
-                                <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
-                                <li><span className="text-item">{question.answer} {question.postfix}</span></li>
+                                <li>
+                                  <ul className="list-inline">
+                                    <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
+                                    <li><span className="text-item">{question.answer} {question.postfix}</span></li>
+                                  </ul>
+                                </li>
                               </ul>
                             );
                           }
@@ -42,7 +50,6 @@ const Result = React.createClass({
                 </ul>
               </li>
               <li><BasedOnGender /></li>
-              <li><BasedOnAge /></li>
             </ul>
           </div>
         </div>

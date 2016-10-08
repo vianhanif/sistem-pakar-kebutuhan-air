@@ -40,11 +40,11 @@ const BasedOnGender = React.createClass({
     let _ = this;
     return(
       <ul className="list-unstyled list-divider text-left">
-        <li className="list-devider"><span className="text-subtitle">Based on Gender</span></li>
+        <li className="list-devider"><span className="text-subtitle">Your Ideal Needs</span></li>
         <li>
           {(()=>{
-            switch(_.que(3).answer){
-              case _.que(3).choices[0]:
+            switch(_.que(4).answer){
+              case _.que(4).choices[0]:
               return(
                 <ul className="list-inline">
                   <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>
@@ -53,16 +53,16 @@ const BasedOnGender = React.createClass({
               );
               break;
 
-              case _.que(3).choices[1]:
-                switch(_.que(4).answer){
-                  case _.que(4).choices[0]:
+              case _.que(4).choices[1]:
+                switch(_.que(5).answer){
+                  case _.que(5).choices[0]:
                   return(
                     <ul className="list-inline">
                       <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>
                       <li><span className="text-item">{_.pregnant()} {_.satuan()} ({_.lainnya(_.pregnant())}) per day</span></li>
                     </ul>
                   );
-                  case _.que(4).choices[1]:
+                  case _.que(5).choices[1]:
                   return(
                     <ul className="list-inline">
                       <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>
@@ -71,7 +71,7 @@ const BasedOnGender = React.createClass({
                   );
                   break;
 
-                  case _.que(4).choices[2]:
+                  case _.que(5).choices[2]:
                   return(
                     <ul className="list-inline">
                       <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>

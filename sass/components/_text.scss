@@ -91,3 +91,7 @@
 .text-centered{
   transform: translateX(-40px);
 }
+
+.text-colorized{
+  color: shade($orange, 0%);
+}

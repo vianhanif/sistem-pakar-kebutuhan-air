@@ -39,23 +39,29 @@ const Question = React.createClass({
     // console.log(data.app.questions[this.props.questionState].answer);
     this.nextQuestion();
   },
-  handleClickImage: function(_choice){
-    data.app.questions[this.props.questionState].answer = $('#' + _choice).text();
+  handleClickImage: function(_choice, _class, _description){
+    data.app.questions[this.props.questionState].answer = $('#' + _choice.split(' ').join('_')).text();
+    data.app.questions[this.props.questionState].class = $('#' + _class.split(' ').join('_')).text();
+    data.app.questions[this.props.questionState].description = $('#' + _description.split(' ').join('_')).text();
     this.nextQuestion();
   },
   nextQuestion: function(){
-    if((this.props.questionState + 1) < data.app.questions.length){
-      if(this.props.questionState + 1 == 4){
-        if(data.app.questions[3].answer == 'Female'){
-          this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
+    if(this.props.questionState + 1 == 2){
+      this.props.setPanelState(<ResultByUrine setPanelState={this.props.setPanelState}/>);
+    }else{
+      if((this.props.questionState + 1) < data.app.questions.length){
+        if(this.props.questionState + 1 == 5){
+          if(data.app.questions[4].answer == 'Female'){
+            this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
+          }else{
+            this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 2]} questionState={this.props.questionState + 2} setPanelState={this.props.setPanelState}/>);
+          }
         }else{
-          this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 2]} questionState={this.props.questionState + 2} setPanelState={this.props.setPanelState}/>);
+            this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
         }
       }else{
-          this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
+        this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);
       }
-    }else{
-      this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);
     }
   },
   imageQuestion: function(){
@@ -70,10 +76,14 @@ const Question = React.createClass({
             {this.props.question.choices.map(function(choice, index){
               return(
                 <li key={index}>
-                  <button className="btn button button-select" onClick={() => click.handleClickImage(choice.name)}>
-                    <ul className="list-inline">
-                      <li><div className={'urine '+choice.class}></div></li>
-                      <li className="urine-text"><span id={choice.name}>{choice.name}</span></li>
+                  <button className="btn button button-select button-invert" onClick={() => click.handleClickImage(choice.name, choice.class, choice.description_id)}>
+                    <div className="urine-inner urine-image">
+                      <div className={'urine '+choice.class}/>
+                    </div>
+                    <ul className="list-unstyled">
+                      <li><span id={choice.name.split(' ').join('_')}>{choice.name}</span></li>
+                      <li className="urine-hidden" id={choice.class}>{choice.class}</li>
+                      <li className="urine-hidden" id={choice.description_id}>{choice.description}</li>
                     </ul>
                   </button>
                 </li>

@@ -21,13 +21,13 @@ const BasedOnAge = React.createClass({
     return this.botol(arg) + " / " + this.cangkir(arg) + ' / ' + this.glass(arg);
   },
   male1: function(){
-    return data.app.questions[3].answer == 'Male' ? 2.4 : 2.1;
+    return data.app.questions[4].answer == 'Male' ? 2.4 : 2.1;
   },
   male2: function(){
-    return data.app.questions[3].answer == 'Male' ? 3.3 : 2.3;
+    return data.app.questions[4].answer == 'Male' ? 3.3 : 2.3;
   },
   male3: function(){
-    return data.app.questions[3].answer == 'Male' ? 3.7 : 2.7;
+    return data.app.questions[4].answer == 'Male' ? 3.7 : 2.7;
   },
   render: function(){
     let _ = this;
@@ -36,7 +36,7 @@ const BasedOnAge = React.createClass({
         <li className="list-devider"><span className="text-subtitle">Based on Age</span></li>
         <li>
           {(()=>{
-            let age = parseFloat(data.app.questions[1].answer);
+            let age = parseFloat(data.app.questions[2].answer);
             if(age >= 0 && age <= .5){
               return(
                 <ul className="list-inline">

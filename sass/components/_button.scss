@@ -34,6 +34,21 @@
   }
 }
 
+.button-invert{
+  min-width: 180px;
+  border: 2px solid rgba($secondary, 0);
+  background-color: transparent;
+  color: $secondary;
+  &:hover{
+    font-weight: 500;
+    border: 2px solid rgba($secondary, .4);
+    background-color: rgba($blue, .1);
+    border-radius: 8px;
+    color: $secondary;
+    box-shadow: none;
+  }
+}
+
 .button-back{
   border: 2px solid rgba($primary, 0);
   padding-left: 0px;
@@ -49,5 +64,14 @@
     background: none;
     color: $secondary;
     border: 2px solid rgba($primary, 0);
+  }
+}
+
+.button-center{
+  @extend .button-back;
+  margin-left: auto;
+  margin-right: auto;
+  &:before{
+    content: '';
   }
 }

@@ -47,47 +47,113 @@ body {
 }
 
 /* line 2, ../sass/components/_urine.scss */
-.urine {
-  height: 50px;
-  width: 50px;
+.urine, .urine-inner {
+  height: 80px;
+  width: 80px;
   border-radius: 40px;
-  margin: 5px;
+  margin-top: 5px;
   margin-bottom: 3px;
+  box-shadow: inset 0 0 10px #404952;
+  opacity: .9;
 }
 
-/* line 10, ../sass/components/_urine.scss */
-.urine-text {
+/* line 13, ../sass/components/_urine.scss */
+.urine-hidden {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+/* line 19, ../sass/components/_urine.scss */
+.urine-inner {
+  box-shadow: 2px 2px 2px rgba(50, 100, 165, 0.335);
+}
+
+/* line 24, ../sass/components/_urine.scss */
+.urine-text, .urine-desc {
   transform: translateY(-22px);
 }
 
-/* line 14, ../sass/components/_urine.scss */
+/* line 28, ../sass/components/_urine.scss */
+.urine-desc {
+  font-size: 20px;
+  color: #7aa8e3;
+  font-weight: 400;
+}
+
+/* line 35, ../sass/components/_urine.scss */
+.urine-choosen {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  max-width: 200px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(228, 241, 254, 0.1);
+  padding: 4px;
+}
+
+/* line 46, ../sass/components/_urine.scss */
+.urine-desc-light {
+  font-size: 20px;
+  color: white;
+}
+
+/* line 51, ../sass/components/_urine.scss */
+.urine-panel {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* line 58, ../sass/components/_urine.scss */
+.urine-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 63, ../sass/components/_urine.scss */
+.text-description {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+}
+
+/* line 70, ../sass/components/_urine.scss */
 .ur-transparent {
-  background-color: red;
+  background-color: #eeeee;
 }
 
-/* line 17, ../sass/components/_urine.scss */
+/* line 74, ../sass/components/_urine.scss */
 .ur-pale {
-  background-color: blue;
+  background-color: #f4f3db;
 }
 
-/* line 20, ../sass/components/_urine.scss */
+/* line 77, ../sass/components/_urine.scss */
 .ur-transparent-yellow {
-  background-color: black;
+  background-color: #f2ebbd;
 }
 
-/* line 23, ../sass/components/_urine.scss */
+/* line 81, ../sass/components/_urine.scss */
+.ur-dark-yellow {
+  background-color: #f1f19d;
+}
+
+/* line 84, ../sass/components/_urine.scss */
 .ur-amber {
-  background-color: yellow;
+  background-color: #e5c687;
 }
 
-/* line 26, ../sass/components/_urine.scss */
+/* line 87, ../sass/components/_urine.scss */
 .ur-syrup {
-  background-color: pink;
+  background-color: #b2a380;
 }
 
-/* line 29, ../sass/components/_urine.scss */
+/* line 90, ../sass/components/_urine.scss */
 .ur-orange {
-  background-color: orange;
+  background-color: #f2a65a;
 }
 
 /* line 1, ../sass/components/_text.scss */
@@ -191,6 +257,11 @@ body {
   transform: translateX(-40px);
 }
 
+/* line 95, ../sass/components/_text.scss */
+.text-colorized {
+  color: #fde3a7;
+}
+
 /* line 1, ../sass/components/_button.scss */
 .button, .text-input {
   font-size: 18px;
@@ -232,22 +303,49 @@ body {
 }
 
 /* line 37, ../sass/components/_button.scss */
-.button-back {
+.button-invert {
+  min-width: 180px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-color: transparent;
+  color: white;
+}
+/* line 42, ../sass/components/_button.scss */
+.button-invert:hover {
+  font-weight: 500;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(228, 241, 254, 0.1);
+  border-radius: 8px;
+  color: white;
+  box-shadow: none;
+}
+
+/* line 52, ../sass/components/_button.scss */
+.button-back, .button-center {
   border: 2px solid rgba(65, 131, 215, 0);
   padding-left: 0px;
   font-size: 24px;
   transform: translateY(-5px);
 }
-/* line 42, ../sass/components/_button.scss */
-.button-back:before {
+/* line 57, ../sass/components/_button.scss */
+.button-back:before, .button-center:before {
   content: '<';
   font-size: 24px;
   padding-right: 5px;
   transform: translateY(2px);
 }
-/* line 48, ../sass/components/_button.scss */
-.button-back:hover, .button-back:focus {
+/* line 63, ../sass/components/_button.scss */
+.button-back:hover, .button-center:hover, .button-back:focus, .button-center:focus {
   background: none;
   color: white;
   border: 2px solid rgba(65, 131, 215, 0);
+}
+
+/* line 70, ../sass/components/_button.scss */
+.button-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 74, ../sass/components/_button.scss */
+.button-center:before {
+  content: '';
 }
