@@ -56,6 +56,19 @@ const Result = React.createClass({
                                 </ul>
                               );
                             }
+                          }else if(index == 7){
+                            if(data.app.questions[1].answer == data.app.questions[1].choices[3].name || data.app.questions[1].answer == data.app.questions[1].choices[4].name){
+                              return(
+                                <ul className="list-inline">
+                                  <li>
+                                    <ul className="list-inline">
+                                      <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
+                                      <li><span className="text-item">{question.answer} {question.postfix}</span></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              );
+                            }
                           }else if(question.index != "Drink"){
                             if(question.answer){
                               return(
