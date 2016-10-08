@@ -121,7 +121,7 @@ const BasedOnGender = React.createClass({
                 <ul className="list-unstyled list-divider text-left">
                   <li className="list-devider"><span className="text-subtitle">Your needs Today</span></li>
                   <li>
-                    <span className="text-item-desc">Today you only need to drink {_.rest (_.state.need - _.drink())} {_.satuan()} ({_.lainnya( _.rest(_.state.need - _.drink()))})  </span>
+                    <span className="text-item-desc">Today you only need to drink {_.rest (_.state.need - _.drink())} {_.satuan()} ({_.lainnya( _.rest(_.state.need - _.drink()))}) more  </span>
                   </li>
                 </ul>
               );

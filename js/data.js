@@ -126,7 +126,7 @@ let data = {
           index: 'You had today',
           type: 'number',
           answer: '',
-          postfix: 'L'
+          postfix: 'L of water'
         },
       ],
     }
