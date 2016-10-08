@@ -31,17 +31,32 @@ const Result = React.createClass({
                     return(
                       <li>
                         {(()=>{
-                          if(question.answer){
-                            return(
-                              <ul className="list-inline">
-                                <li>
-                                  <ul className="list-inline">
-                                    <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
-                                    <li><span className="text-item">{question.answer} {question.postfix}</span></li>
-                                  </ul>
-                                </li>
-                              </ul>
-                            );
+                          if(question.index == "Drink" && (data.app.questions[1].answer == data.app.questions[1].choices[3].name || data.app.questions[1].answer == data.app.questions[1].choices[4].name)){
+                            if(question.answer){
+                              return(
+                                <ul className="list-inline">
+                                  <li>
+                                    <ul className="list-inline">
+                                      <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
+                                      <li><span className="text-item">{question.answer} {question.postfix}</span></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              );
+                            }
+                          }else if(question.index != "Drink"){
+                            if(question.answer){
+                              return(
+                                <ul className="list-inline">
+                                  <li>
+                                    <ul className="list-inline">
+                                      <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
+                                      <li><span className="text-item">{question.answer} {question.postfix}</span></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              );
+                            }
                           }
                         })()}
                       </li>

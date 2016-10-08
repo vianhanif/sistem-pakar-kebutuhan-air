@@ -123,7 +123,7 @@ let data = {
         {
           name: 'drink',
           question: "How much water you have today (L) ?",
-          index: 'Drink',
+          index: 'You had today',
           type: 'number',
           answer: '',
           postfix: 'L'
