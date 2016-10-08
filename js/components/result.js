@@ -25,7 +25,7 @@ const Result = React.createClass({
               <li>
                 <ul className="list-unstyled list-divider text-left">
                   <li>
-                    <span className="text-subtitle">This is your records</span>
+                    <span className="text-subtitle">These are your records</span>
                   </li>
                   {data.app.questions.map(function(question, index){
                     return(
