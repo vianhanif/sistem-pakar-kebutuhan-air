@@ -37,7 +37,7 @@ const ResultByUrine = React.createClass({
                     </div>
                   </li>
                   <li className="text-description">
-                    <span>So, if your urine color is <b className="text-colorized">{data.app.questions[1].answer}</b>, then it’s indicates that <b className="text-colorized">{data.app.questions[1].description}</b></span>
+                    <span>So, if your urine color is <b className="text-colorized">{data.app.questions[1].answer}</b>, then it indicates that <b className="text-colorized">{data.app.questions[1].description}</b></span>
                   </li>
                 </ul>
               </li>
