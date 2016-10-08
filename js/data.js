@@ -67,7 +67,7 @@ let data = {
               },
               {
                 name: "Orange",
-                description: "you may not be drinking enough water or it could be food dye. And if it persiss, see a doctor (you could have a liver or bile duct condition).",
+                description: "you may not be drinking enough water or it could be food dye. And if it persist, see a doctor (you could have a liver or bile duct condition).",
                 description_id: 'desc-orange',
                 class: 'ur-orange'
               }
