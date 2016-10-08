@@ -1,6 +1,6 @@
 let data = {
     app: {
-      name: 'Aqua Meter',
+      name: 'AQUA Meter',
       description: "This ES will give an advice about how much water that human's body needs based on weight, gender, and activity. So, how much water your body needs today?",
       writers: {
         title: 'Writers',
@@ -119,6 +119,14 @@ let data = {
           type: 'choice',
           choices: ['Yes', 'No'],
           answer: ''
+        },
+        {
+          name: 'drink',
+          question: "How much water you have today (L) ?",
+          index: 'Drink',
+          type: 'number',
+          answer: '',
+          postfix: 'L'
         },
       ],
     }

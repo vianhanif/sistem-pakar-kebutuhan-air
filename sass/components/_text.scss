@@ -95,3 +95,10 @@
 .text-colorized{
   color: shade($orange, 0%);
 }
+
+.text-item-desc{
+  @extend .text-list;
+  &:before{
+    content: '';
+  }
+}

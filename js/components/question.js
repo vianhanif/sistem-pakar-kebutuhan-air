@@ -56,7 +56,13 @@ const Question = React.createClass({
           }else{
             this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 2]} questionState={this.props.questionState + 2} setPanelState={this.props.setPanelState}/>);
           }
-        }else{
+        } else if(this.props.questionState + 1 == 7){
+          if(data.app.questions[1].answer == data.app.questions[1].choices[3].name || data.app.questions[1].answer == data.app.questions[1].choices[4].name){
+            this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
+          }else{
+            this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);
+          }
+        } else{
             this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
         }
       }else{

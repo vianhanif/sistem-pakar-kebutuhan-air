@@ -187,13 +187,13 @@ body {
 }
 
 /* line 27, ../sass/components/_text.scss */
-.text-list, .text-label, .text-item {
+.text-list, .text-label, .text-item, .text-item-desc {
   font-size: 22px;
   font-weight: 500;
   color: #e4f1fe;
 }
 /* line 28, ../sass/components/_text.scss */
-.text-list:before, .text-label:before, .text-item:before {
+.text-list:before, .text-label:before, .text-item:before, .text-item-desc:before {
   content: '>';
   font-weight: 700;
   padding-right: 4px;
@@ -260,6 +260,11 @@ body {
 /* line 95, ../sass/components/_text.scss */
 .text-colorized {
   color: #fde3a7;
+}
+
+/* line 101, ../sass/components/_text.scss */
+.text-item-desc:before {
+  content: '';
 }
 
 /* line 1, ../sass/components/_button.scss */
