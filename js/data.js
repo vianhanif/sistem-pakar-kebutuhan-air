@@ -49,13 +49,13 @@ let data = {
               },
               {
                 name: 'Dark Yellow',
-                description: "you're normal. But drink some water soon",
+                description: "you're normal. But drink some water soon.",
                 description_id: 'desc-dark-yellow',
                 class: 'ur-dark-yellow',
               },
               {
                 name: "Amber or Honey",
-                description: "your body isn't getting enough water. Drink some now",
+                description: "your body isn't getting enough water. Drink some now.",
                 description_id: 'desc-amber',
                 class: 'ur-amber'
               },
