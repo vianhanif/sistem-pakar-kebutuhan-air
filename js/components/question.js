@@ -39,6 +39,10 @@ const Question = React.createClass({
     // console.log(data.app.questions[this.props.questionState].answer);
     this.nextQuestion();
   },
+  handleClickImage: function(_choice){
+    data.app.questions[this.props.questionState].answer = $('#' + _choice).text();
+    this.nextQuestion();
+  },
   nextQuestion: function(){
     if((this.props.questionState + 1) < data.app.questions.length){
       if(this.props.questionState + 1 == 4){
@@ -53,6 +57,32 @@ const Question = React.createClass({
     }else{
       this.props.setPanelState(<Result setPanelState={this.props.setPanelState}/>);
     }
+  },
+  imageQuestion: function(){
+    let click = this;
+    return(
+      <div>
+        <div className="col-xs-12">
+          <span className="text-subtitle">{this.props.question.question}</span>
+        </div>
+        <div className="col-xs-12">
+          <ul className="list-inline">
+            {this.props.question.choices.map(function(choice, index){
+              return(
+                <li key={index}>
+                  <button className="btn button button-select" onClick={() => click.handleClickImage(choice.name)}>
+                    <ul className="list-inline">
+                      <li><div className={'urine '+choice.class}></div></li>
+                      <li className="urine-text"><span id={choice.name}>{choice.name}</span></li>
+                    </ul>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    );
   },
   textQuestion: function(){
     return(
@@ -100,6 +130,7 @@ const Question = React.createClass({
       case 'text': return this.textQuestion();break;
       case 'number': return this.textQuestion();break;
       case 'choice': return this.choiceQuestion();break;
+      case 'image': return this.imageQuestion();break;
     }
   },
   render: function(){

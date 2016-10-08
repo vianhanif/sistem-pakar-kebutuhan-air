@@ -1,0 +1,31 @@
+$size: 50px;
+.urine{
+  height: $size;
+  width: $size;
+  // background-color: red;
+  border-radius: 40px;
+  margin: 5px;
+  margin-bottom: 3px;
+}
+.urine-text{
+  transform: translateY(-22px);
+}
+
+.ur-transparent{
+  background-color: red;
+}
+.ur-pale{
+  background-color: blue;
+}
+.ur-transparent-yellow{
+  background-color: black;
+}
+.ur-amber{
+  background-color: yellow;
+}
+.ur-syrup{
+  background-color: pink;
+}
+.ur-orange{
+  background-color: orange;
+}
