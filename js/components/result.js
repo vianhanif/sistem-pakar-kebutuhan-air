@@ -4,7 +4,6 @@ const Result = React.createClass({
     this.props.setPanelState(<Start setPanelState={this.props.setPanelState}/>);
   },
   render: function(){
-    console.log(data);
     return(
       <div>
         <div className="row">
@@ -44,6 +43,19 @@ const Result = React.createClass({
                                 </ul>
                               );
                             }
+                          }else if(index == 5){
+                            if(data.app.questions[4].answer == 'Female'){
+                              return(
+                                <ul className="list-inline">
+                                  <li>
+                                    <ul className="list-inline">
+                                      <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
+                                      <li><span className="text-item">{question.answer} {question.postfix}</span></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              );
+                            }
                           }else if(question.index != "Drink"){
                             if(question.answer){
                               return(
@@ -57,6 +69,17 @@ const Result = React.createClass({
                                 </ul>
                               );
                             }
+                          }else{
+                            return(
+                              <ul className="list-inline">
+                                <li>
+                                  <ul className="list-inline">
+                                    <li className="text-wide"><span className="text-label text-label-addon">{question.index}</span></li>
+                                    <li><span className="text-item">{question.answer} {question.postfix}</span></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            );
                           }
                         })()}
                       </li>

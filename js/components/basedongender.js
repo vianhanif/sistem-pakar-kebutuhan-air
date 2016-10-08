@@ -106,7 +106,7 @@ const BasedOnGender = React.createClass({
           </li>
         </ul>
         {(()=>{
-          if(_.rest (_.state.need - _.drink()).toString().includes('-')){
+          if(_.rest (_.state.need - _.drink()).toString().includes('-') || parseFloat(_.rest (_.state.need - _.drink())) <= 0.0){
             return(
               <ul className="list-unstyled list-divider text-left">
                 <li className="list-devider"><span className="text-subtitle">Your needs Today</span></li>
