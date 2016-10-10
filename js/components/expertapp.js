@@ -11,7 +11,7 @@ const ExpertApp = React.createClass({
     return(
       <div className="container">
         <div className="row">
-          <div className="col-sm-8 col-sm-offset-2 text-center">
+          <div className="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
             {this.state.panelState}
           </div>
         </div>
