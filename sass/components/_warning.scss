@@ -1,0 +1,14 @@
+.panel-warning{
+  background-color: $secondary;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px solid shade($secondary, 10%);
+}
+.icon-warning{
+  font-size: 30px;
+  color: tint($red, 30%);
+}
+.text-warning{
+  font-size: 24px;
+  color: tint($red, 60%);
+  transform: translateY(-10px);
+}

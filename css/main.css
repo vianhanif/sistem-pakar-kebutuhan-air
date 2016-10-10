@@ -354,3 +354,23 @@ body {
 .button-center:before {
   content: '';
 }
+
+/* line 1, ../sass/components/_warning.scss */
+.panel-warning {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px solid #e5e5e5;
+}
+
+/* line 6, ../sass/components/_warning.scss */
+.icon-warning {
+  font-size: 30px;
+  color: #f37e72;
+}
+
+/* line 10, ../sass/components/_warning.scss */
+.text-warning {
+  font-size: 24px;
+  color: #f8b5ae;
+  transform: translateY(-10px);
+}
