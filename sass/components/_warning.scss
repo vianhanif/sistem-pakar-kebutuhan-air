@@ -1,14 +1,27 @@
 .panel-warning{
-  background-color: $secondary;
+  background-color: rgba(tint($red, 90%), 1);
   border-radius: 6px;
   box-shadow: 0px 2px 4px 0px solid shade($secondary, 10%);
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 2px solid tint($red, 60%);
 }
 .icon-warning{
-  font-size: 30px;
+  font-size: 66px !important;
   color: tint($red, 30%);
+  transform: translate(4px, -2px);
+  @media(max-width: 768px){
+    transform: translateX(8px);
+    font-size: 36px !important;
+  }
 }
 .text-warning{
-  font-size: 24px;
-  color: tint($red, 60%);
-  transform: translateY(-10px);
+  font-size: 22px;
+  color: tint($red, 20%);
+  transform: translateY(-2px);
+  text-align: left;
+  @media(max-width: 768px){
+    font-size: 14px;
+  }
 }
