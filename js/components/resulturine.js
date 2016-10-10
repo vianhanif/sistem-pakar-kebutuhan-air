@@ -24,6 +24,7 @@ const ResultByUrine = React.createClass({
                   </ul>
                 </li>
               </li>
+              <li><Warning /></li>
               <li>
                 <ul className="list-unstyled list-divider text-left">
                   <li>

@@ -39,10 +39,11 @@ const Question = React.createClass({
     // console.log(data.app.questions[this.props.questionState].answer);
     this.nextQuestion();
   },
-  handleClickImage: function(_choice, _class, _description){
+  handleClickImage: function(_choice, _class, _description, _warning){
     data.app.questions[this.props.questionState].answer = $('#' + _choice.split(' ').join('_')).text();
     data.app.questions[this.props.questionState].class = $('#' + _class.split(' ').join('_')).text();
     data.app.questions[this.props.questionState].description = $('#' + _description.split(' ').join('_')).text();
+    data.app.questions[this.props.questionState].warning = $('#' + _warning).text();
     this.nextQuestion();
   },
   nextQuestion: function(){
@@ -82,7 +83,7 @@ const Question = React.createClass({
             {this.props.question.choices.map(function(choice, index){
               return(
                 <li key={index}>
-                  <button className="btn button button-select button-invert" onClick={() => click.handleClickImage(choice.name, choice.class, choice.description_id)}>
+                  <button className="btn button button-select button-invert" onClick={() => click.handleClickImage(choice.name, choice.class, choice.description_id, choice.warning_id)}>
                     <div className="urine-inner urine-image">
                       <div className={'urine '+choice.class}/>
                     </div>
@@ -90,6 +91,7 @@ const Question = React.createClass({
                       <li><span id={choice.name.split(' ').join('_')}>{choice.name}</span></li>
                       <li className="urine-hidden" id={choice.class}>{choice.class}</li>
                       <li className="urine-hidden" id={choice.description_id}>{choice.description}</li>
+                      <li className="urine-hidden" id={choice.warning_id}>{choice.warning}</li>
                     </ul>
                   </button>
                 </li>

@@ -61,20 +61,25 @@ let data = {
               },
               {
                 name: "Syrup or Brown Ale",
-                description: "you could have severe dehydration. Drink water. And if it persist, see a doctor (you could have liver disease).",
+                description: "you could have severe dehydration. Drink water.",
                 description_id: 'desc-syrup',
-                class: 'ur-syrup'
+                class: 'ur-syrup',
+                warning: 'If it persist, see a doctor (you could have liver disease).',
+                warning_id: 'warn-syrup'
               },
               {
                 name: "Orange",
-                description: "you may not be drinking enough water or it could be food dye. And if it persist, see a doctor (you could have a liver or bile duct condition).",
+                description: "you may not be drinking enough water or it could be food dye.",
                 description_id: 'desc-orange',
-                class: 'ur-orange'
+                class: 'ur-orange',
+                warning: 'If it persist, see a doctor (you could have a liver or bile duct condition).',
+                warning_id: 'warn-orange'
               }
           ],
           answer: '',
           description: '',
-          class: ''
+          class: '',
+          warning: ''
         },
         {
           name: 'umur',
