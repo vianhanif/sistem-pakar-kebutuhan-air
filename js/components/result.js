@@ -43,8 +43,8 @@ const Result = React.createClass({
                                 </ul>
                               );
                             }
-                          }else if(index == 5){
-                            if(data.app.questions[4].answer == 'Female'){
+                          }else if(index == 4){
+                            if(data.app.questions[3].answer == 'Female'){
                               return(
                                 <ul className="list-inline">
                                   <li>
@@ -56,7 +56,7 @@ const Result = React.createClass({
                                 </ul>
                               );
                             }
-                          }else if(index == 7){
+                          }else if(index == 6){
                             if(data.app.questions[1].answer == data.app.questions[1].choices[3].name || data.app.questions[1].answer == data.app.questions[1].choices[4].name){
                               return(
                                 <ul className="list-inline">
