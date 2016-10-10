@@ -43,7 +43,23 @@ body {
 
 /* line 31, ../sass/components/_base.scss */
 .opac-visible {
-  opacity: .4;
+  opacity: .7;
+}
+
+/* line 35, ../sass/components/_base.scss */
+.text-icon, .icon-gelas, .icon-botol {
+  width: 20px;
+  height: auto;
+}
+
+/* line 40, ../sass/components/_base.scss */
+.icon-gelas {
+  width: 25px;
+}
+
+/* line 49, ../sass/components/_base.scss */
+.icon-cangkir {
+  padding-left: 3px;
 }
 
 /* line 2, ../sass/components/_urine.scss */

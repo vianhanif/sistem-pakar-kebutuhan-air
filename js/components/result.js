@@ -22,7 +22,6 @@ const Result = React.createClass({
                 </li>
               </li>
               <li>
-                <li><Warning /></li>
                 <ul className="list-unstyled list-divider text-left">
                   <li>
                     <span className="text-subtitle">These are your records</span>
@@ -102,6 +101,7 @@ const Result = React.createClass({
                 </ul>
               </li>
               <li><BasedOnGender /></li>
+              <li><Warning /></li>
             </ul>
           </div>
         </div>

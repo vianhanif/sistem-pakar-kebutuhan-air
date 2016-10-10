@@ -13,17 +13,17 @@ const BasedOnGender = React.createClass({
     return 0.03;
   },
   weight: function(){
-    return parseFloat(this.que(3).answer).toFixed(2);
+    return parseFloat(this.que(2).answer).toFixed(2);
   },
   drink: function(){
     let drunk = 0;
     if(this.que(1).answer == this.que(1).choices[3].name || this.que(1).answer == this.que(1).choices[4].name){
-      drunk = parseFloat(this.que(7).answer);
+      drunk = parseFloat(this.que(6).answer);
     }
     return drunk;
   },
   exercise: function(){
-    return this.que(6).answer == 'Yes' ? 0.55 : 0;
+    return this.que(4).answer == 'Yes' ? 0.55 : 0;
   },
   normal: function(){
     this.setState({need: (parseFloat(Math.round(( (this.default()*this.weight()) + this.exercise()) * 100)/100)) });
@@ -38,19 +38,29 @@ const BasedOnGender = React.createClass({
     return (parseFloat(Math.round((this.default()*this.weight()+0.55 + this.exercise()) * 100)/100));
   },
   glass: function(arg){
-    return Math.round(arg/0.25) + ' glass';
+    return (
+      <span>{Math.round(arg/0.25)}<img src="assets/gelas.png" className="icon-gelas"/></span>
+    );
   },
   botol: function(arg){
-    return Math.round(arg/0.6) + ' bottle';
+    return (
+      <span>{Math.round(arg/0.6)}<img src="assets/botol.png" className="icon-botol"/></span>
+    );
   },
   cangkir: function(arg){
-    return Math.round(arg/0.24) + ' cup';
+    return (
+      <span>{Math.round(arg/0.24)}<i className="fa fa-coffee icon-cangkir"></i></span>
+    );
   },
   satuan: function(){
     return 'L';
   },
   lainnya: function(arg){
-    return this.botol(arg) + " / " + this.cangkir(arg) + ' / ' + this.glass(arg);
+    return(
+      <span>
+        {this.botol(arg)} / {this.glass(arg)} / {this.cangkir(arg)}
+      </span>
+    );
   },
   rest: function(arg){
     return (parseFloat(Math.round( arg * 100)/100));
@@ -63,8 +73,8 @@ const BasedOnGender = React.createClass({
           <li className="list-devider"><span className="text-subtitle">Your Ideal Needs</span></li>
           <li>
             {(()=>{
-              switch(_.que(4).answer){
-                case _.que(4).choices[0]:
+              switch(_.que(3).answer){
+                case _.que(3).choices[0]:
                 return(
                   <ul className="list-inline">
                     <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>
@@ -73,16 +83,16 @@ const BasedOnGender = React.createClass({
                 );
                 break;
 
-                case _.que(4).choices[1]:
-                  switch(_.que(5).answer){
-                    case _.que(5).choices[0]:
+                case _.que(3).choices[1]:
+                  switch(_.que(3).answer){
+                    case _.que(3).choices[0]:
                     return(
                       <ul className="list-inline">
                         <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>
                         <li><span className="text-item">{_.pregnant()} {_.satuan()} ({_.lainnya(_.pregnant())}) per day</span></li>
                       </ul>
                     );
-                    case _.que(5).choices[1]:
+                    case _.que(3).choices[1]:
                     return(
                       <ul className="list-inline">
                         <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>
@@ -91,7 +101,7 @@ const BasedOnGender = React.createClass({
                     );
                     break;
 
-                    case _.que(5).choices[2]:
+                    case _.que(3).choices[2]:
                     return(
                       <ul className="list-inline">
                         <li className="text-wide"><span className="text-label text-label-addon">Water Need</span></li>

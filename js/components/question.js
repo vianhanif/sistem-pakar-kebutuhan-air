@@ -51,13 +51,13 @@ const Question = React.createClass({
       this.props.setPanelState(<ResultByUrine setPanelState={this.props.setPanelState}/>);
     }else{
       if((this.props.questionState + 1) < data.app.questions.length){
-        if(this.props.questionState + 1 == 5){
-          if(data.app.questions[4].answer == 'Female'){
+        if(this.props.questionState + 1 == 4){
+          if(data.app.questions[3].answer == 'Female'){
             this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
           }else{
             this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 2]} questionState={this.props.questionState + 2} setPanelState={this.props.setPanelState}/>);
           }
-        } else if(this.props.questionState + 1 == 7){
+        } else if(this.props.questionState + 1 == 6){
           if(data.app.questions[1].answer == data.app.questions[1].choices[3].name || data.app.questions[1].answer == data.app.questions[1].choices[4].name){
             this.props.setPanelState(<Question question={data.app.questions[this.props.questionState + 1]} questionState={this.props.questionState + 1} setPanelState={this.props.setPanelState}/>);
           }else{

@@ -1,18 +1,18 @@
 let data = {
     app: {
       name: 'AQUA Meter',
-      description: "This ES will give an advice about how much water that human's body needs based on weight, gender, and activity. So, how much water your body needs today?",
+      description: "This ES will give an advice about how much water that human's body needs based on urine color, weight, gender, and activity. So, how much water your body needs today?",
       writers: {
         title: 'Writers',
         list: [
-          {id: '412312412', name: 'Eka Miratul Khasanah'},
-          {id: '124123412', name: 'Mitha Filandari'}
+          {id: '22212412', name: 'Eka Miratul Khasanah'},
+          {id: '24212612', name: 'Mitha Filandari'}
         ]
       },
       credits: {
         title: 'Credits',
         list: [
-          {id: '50412668', name: 'Alvian Rahman Hanif'}
+          {id: '92316004', name: 'Alvian Rahman Hanif'}
         ]
       },
       questions: [
@@ -81,14 +81,14 @@ let data = {
           class: '',
           warning: ''
         },
-        {
-          name: 'umur',
-          question: 'How old are you (years) ?',
-          index: 'Age',
-          type: 'number',
-          answer: '',
-          postfix: 'years old'
-        },
+        // {
+        //   name: 'umur',
+        //   question: 'How old are you (years) ?',
+        //   index: 'Age',
+        //   type: 'number',
+        //   answer: '',
+        //   postfix: 'years old'
+        // },
         {
           name: 'berat',
           question: 'How much do you weight (kg) ?',

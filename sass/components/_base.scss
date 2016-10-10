@@ -29,5 +29,23 @@ body{
 }
 
 .opac-visible{
-  opacity: .4;
+  opacity: .7;
+}
+
+.text-icon{
+  width: 20px;
+  height: auto;
+}
+
+.icon-gelas{
+  @extend .text-icon;
+  width: 25px;
+}
+
+.icon-botol{
+  @extend .text-icon;
+}
+
+.icon-cangkir{
+  padding-left: 3px;
 }
