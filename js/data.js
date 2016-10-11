@@ -1,7 +1,7 @@
 let data = {
     app: {
       name: 'AQUA Meter',
-      description: "This ES will give an advice about how much water that human's body needs based on urine color, weight, gender, and activity. So, how much water your body needs today?",
+      description: "This Expert System will give an advice about how much water that human's body needs based on urine color, weight, gender, and activity. So, how much water your body needs today?",
       writers: {
         title: 'Writers',
         list: [
