@@ -9,6 +9,7 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="css/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -16,7 +17,6 @@
     <script src="js/dist/jquery-3.1.1.min.js"></script>
     <script src="css/vendor/js/bootstrap.min.js"></script>
 
-    <script src="js/dist/fontawesome.min.js"></script>
     <script src="js/dist/react.min.js"></script>
     <script src="js/dist/react-dom.min.js"></script>
     <script src="js/dist/browser.min.js"></script>
