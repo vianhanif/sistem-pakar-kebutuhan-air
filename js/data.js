@@ -3,16 +3,16 @@ let data = {
       name: 'AQUA Meter',
       description: "This Expert System will give an advice about how much water that human's body needs based on urine color, weight, gender, and activity. So, how much water your body needs today?",
       writers: {
-        title: 'Writers',
+        title: '', //Writers
         list: [
-          {id: '22212412', name: 'Eka Miratul Khasanah'},
-          {id: '24212612', name: 'Mitha Filandari'}
+          // {id: '22212412', name: 'Eka Miratul Khasanah'},
+          // {id: '24212612', name: 'Mitha Filandari'}
         ]
       },
       credits: {
-        title: 'Credits',
+        title: '', //Credits
         list: [
-          {id: '92316004', name: 'Alvian Rahman Hanif'}
+          // {id: '92316004', name: 'Alvian Rahman Hanif'}
         ]
       },
       questions: [
